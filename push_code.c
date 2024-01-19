@@ -21,7 +21,6 @@ void _push(stack_t **stack, unsigned int i, char *trigger)
 	{
 		fprintf(stderr, "Error: malloc failed");
 		exit(EXIT_FAILURE);
-		free(new);
 	}
 
 	if (sscanf(trigger, "%d", &(new->n)) != 1)

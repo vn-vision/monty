@@ -1,8 +1,6 @@
 #include "monty.h"
 #include "commands.h"
-#include <stddef.h>
 #include <stdio.h>
-#include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -39,6 +37,7 @@ int main(int argc, char *argv[])
 	{
 		while (fgets(data, sizeof(data), file) != NULL)
 		{
+			i++;
 			trigger = strtok(data, " \t\n");
 			if (trigger != NULL && strcmp(trigger, "push") == 0)
 			{
@@ -69,9 +68,9 @@ int main(int argc, char *argv[])
 				fprintf(stderr, "L%u: usage: push integer\n", i);
 				exit(EXIT_FAILURE);
 			}
-			i++;
 		}
 	}
 	fclose(file);
+	free_stack(stack);
 	return (0);
 }
