@@ -7,5 +7,10 @@ instruction_t Commands[] = {
 	{"pop", pop},
 	{"add", add},
 	{"swap", swap},
+	{"sub", _sub},
+	{"div", _div},
+	{"mul", _mul},
+	{"mod", _mod},
+	{"#", nop},
 	{NULL, NULL}
 };

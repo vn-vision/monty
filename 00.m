@@ -1,4 +1,7 @@
-push 1a
-push 2df
-push 3f
-nop
+push 1
+push 2
+push 30000
+push 300
+div
+# 4 5
+pall
