@@ -14,6 +14,7 @@
 void _push(stack_t **stack, unsigned int i, char *trigger)
 {
 	stack_t *new;
+	char *endptr;
 
 	new = malloc(sizeof(stack_t));
 
@@ -23,7 +24,8 @@ void _push(stack_t **stack, unsigned int i, char *trigger)
 		exit(EXIT_FAILURE);
 	}
 
-	if (sscanf(trigger, "%d", &(new->n)) != 1)
+	new->n = strtol(trigger, &endptr, 10);
+	if (*endptr != '\0' && *endptr != '\n' && *endptr != '\r')
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", i);
 		exit(EXIT_FAILURE);

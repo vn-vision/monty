@@ -25,7 +25,7 @@ void _sub(stack_t **stack, unsigned int i)
 	a = (*stack)->n;
 	b = temp->n;
 
-	temp->n = abs((a - b));
+	temp->n = abs((b - a));
 	*stack = temp;
 
 	if (*stack != NULL)
