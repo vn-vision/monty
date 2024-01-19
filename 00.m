@@ -1,4 +1,4 @@
-push 1
-pall
-pop
-pall
+push 1a
+push 2df
+push 3f
+nop

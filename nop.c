@@ -11,7 +11,7 @@
 void nop(stack_t **stack, unsigned int i)
 {
 	/* this doesn't do anything */
-	if (*stack || i)
-		exit(EXIT_SUCCESS);
+	(void)*stack;
+	(void)i;
 
 }
