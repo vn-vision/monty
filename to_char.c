@@ -20,7 +20,7 @@ void pchar(stack_t **stack, unsigned int i)
 	}
 	a = (*stack)->n;
 
-	if (a >= 0 && a <= 127)
+	if (a > 0 && a <= 127)
 		fprintf(stdout, "%c\n", a);
 	else
 	{
