@@ -48,5 +48,5 @@ void pop(stack_t **stack, unsigned int i);
 void nop(stack_t **stack, unsigned int i);
 void add(stack_t **stack, unsigned int i);
 void swap(stack_t **stack, unsigned int i);
-
+void free_stack(stack_t **stack);
 #endif

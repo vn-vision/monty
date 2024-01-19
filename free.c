@@ -13,9 +13,7 @@ void free_stack(stack_t **stack)
 	stack_t *temp;
 
 	if (*stack == NULL)
-		fprintf(stderr, "Stack is empty");
-
-
+		return;
 	while (*stack != NULL)
 	{
 		temp = (*stack)->next;

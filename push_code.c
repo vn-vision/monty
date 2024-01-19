@@ -19,7 +19,7 @@ void _push(stack_t **stack, unsigned int i, char *trigger)
 
 	if (new == NULL)
 	{
-		fprintf(stderr, "Error: malloc failed");
+		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
 
@@ -27,7 +27,6 @@ void _push(stack_t **stack, unsigned int i, char *trigger)
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", i);
 		exit(EXIT_FAILURE);
-		free(new);
 	}
 	/* add at front */
 	new->next = *stack;
