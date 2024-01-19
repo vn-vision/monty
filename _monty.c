@@ -1,4 +1,6 @@
 #include "monty.h"
+#include "commands.h"
+#include <stddef.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -14,20 +16,19 @@
 int main(int argc, char *argv[])
 {
 	stack_t *stack;
-	char *trigger, 	data[1024];;
+	char *trigger;
+	char data[1024];
 	FILE *file;
 	unsigned int found, i, k;
 
 	k = 0;
 	i = 1;
 	stack = NULL;
-
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-
 	file = fopen(argv[1], "r");
 	if (file == NULL)
 	{
