@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
-* sub - subs elements
+* _sub - subs elements
 * @stack: stack to swap
 * @i: line number
 * Return: void

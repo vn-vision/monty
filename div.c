@@ -31,7 +31,7 @@ void _div(stack_t **stack, unsigned int i)
 		fprintf(stderr, "L%u: division by zero", i);
 		exit(EXIT_FAILURE);
 	}
-	temp->n = (b / a);
+	temp->n = abs(b / a);
 	*stack = temp;
 
 	if (*stack != NULL)

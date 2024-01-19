@@ -17,7 +17,7 @@ void _mul(stack_t **stack, unsigned int i)
 
 	if (*stack == NULL || ((*stack)->next == NULL))
 	{
-		fprintf(stderr, "L%u: can't div, stack too short\n", i);
+		fprintf(stderr, "L%u: can't mul, stack too short\n", i);
 		exit(EXIT_FAILURE);
 	}
 

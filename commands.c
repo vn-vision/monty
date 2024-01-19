@@ -11,6 +11,8 @@ instruction_t Commands[] = {
 	{"div", _div},
 	{"mul", _mul},
 	{"mod", _mod},
+	{"pstr", pstr},
+	{"pchar", pchar},
 	{"#", nop},
 	{NULL, NULL}
 };
